@@ -5,9 +5,9 @@ import {Container} from "@mui/material";
 const Layout: React.FC<PropsWithChildren> = ({children}) => {
   return (
     <div>
-      <header>
+      <header style={{background: "blue"}}>
         <Container sx={{padding:2}}>
-          <Link to={"/"}>News</Link>
+          <Link to={"/"} style={{textDecoration: "none", color: "white"}}>News</Link>
         </Container>
       </header>
       <div>

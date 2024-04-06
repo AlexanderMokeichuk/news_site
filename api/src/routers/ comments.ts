@@ -44,7 +44,7 @@ commentsRouter.get("/", async (req, res, next) => {
   }
 });
 
-commentsRouter.get("/?news_id=:id", async (req, res, next) => {
+commentsRouter.get("/:id", async (req, res, next) => {
   const id = req.params.id;
   try {
     const [result] = await mysqlDb.getConnection().query(`SELECT * FROM comments WHERE news_id = ${id}`);
