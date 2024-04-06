@@ -4,3 +4,9 @@ export interface NewsFromFrontend {
   description: string,
   datetime: string,
 }
+
+export interface CommentFromFrontend {
+  newsId: number,
+  author: string
+  comment: string,
+}

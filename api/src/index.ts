@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import mysqlDb from "./mysqlDb";
 import newsRouter from "./routers/news";
+import commentsRouter from "./routers/ comments";
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.use(express.json());
 app.use(express.static("./src/public"));
 
 app.use("/news", newsRouter);
+app.use("/comments", commentsRouter);
 
 const run = async () => {
   await mysqlDb.init();
